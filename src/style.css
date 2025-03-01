@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Style global */
+* {
+  margin: 0; /* Supprimer les marges par défaut de tous les éléments */
+  padding: 0; /* Supprimer le padding par défaut */
+  box-sizing: border-box; /* Assurer que les bordures et le padding n'affectent pas la taille des éléments */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff8f1; /* Blanc cassé */
+  text-align: center;
+  height: 100vh; /* S'assure que le body prend toute la hauteur de la fenêtre */
+  display: flex; /* Utiliser flexbox pour remplir l'écran */
+  flex-direction: column;
+}
+
+/* Bandeau principal */
+header {
+  background-color: #fff8f1; /* Blanc cassé */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo {
+  width: 50px;
+  height: auto;
+}
+
+/* Section des catégories */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+.category {
+  background-color: #fff8f1;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.category img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category p {
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+/* Bloc produits en vedette */
+.featured-products {
+  background-color: #fff8f1;
+  padding: 50px 20px;
+}
+
+.featured-products h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  color: #333;
+}
+
+.products {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product {
+  background-color: #fff8f1;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product p {
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #333;
+}
+
+/* Pied de page */
+footer {
+  background-color: #fff8f1;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Permet de pousser le footer tout en bas */
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer p {
+  margin-top: 10px;
+  color: #555;
+  text-align: center;
+}
