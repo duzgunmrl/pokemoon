@@ -22,7 +22,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 
 const searchQuery = ref('');
-const showSearch = ref(false);
+const showSearch = ref(true);
 const isShrunk = ref(false);
 const router = useRouter();
 

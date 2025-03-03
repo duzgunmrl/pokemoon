@@ -1,9 +1,9 @@
 <template>
   <footer>
     <ul class="footer-links">
-      <li><a href="#">Contact</a></li>
+      <li><a href="mailto:help.aurumstore@gmail.com">Contact</a></li>
       <li><a href="https://www.instagram.com/aurum_vaultt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-      <li><a href="#">Mentions légales</a></li>
+      <li><a href="/mentionslegales">Mentions légales</a></li>
     </ul>
     <p>&copy; 2025 Aurum - Tous droits réservés.</p>
   </footer>

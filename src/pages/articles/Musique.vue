@@ -1,164 +1,67 @@
 <template>
-    <div class="musique">
-      <h1>Musique</h1>
-      <p>Plongez dans l'univers des vinyles ultra-rares et trouvez les pépites des plus grands artistes</p>
-  
-      <!-- Liste des Musiques -->
-      <div class="products">
-        <!-- Musique 1 - Nas - Illmatic -->
-        <div class="product">
-          <div class="card">
-            <div class="card-front">
-              <img src="@/assets/produit-nas.png" alt="Nas - Illmatic" />
-              <h3> Nas - Illmatic</h3>
-              <p class="price">350€</p>
-            </div>
-            <div class="card-back">
-              <p class="description">Illmatic est le premier album studio du rappeur américain Nas, sorti le 19 avril 1994 sur le label Columbia.</p>
-  
-              <!-- Description -->
-              <div class="detail">
-                <div class="Édition">
-                  <p> Édition : First Pressing 1994</p>
-                </div>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3kEtdS2pH6hKcMU9Wioob1?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>              
-              </div>
-              <a href="https://wa.me/+33768162985?text=Je%20veux%20acheter%20le%20Alexander%20Digenova%20-%20Cigarette%20Tee%20à%20350€." target="_blank">
-                <button class="buy-button">Acheter maintenant !</button>
-              </a>
-            </div>
-          </div>
-        </div>
-  
-  
-        <!-- Musique 2 - Kanye West - Yeezus -->
-        <div class="product">
-          <div class="card">
-            <div class="card-front">
-              <img src="@/assets/produit-ye.png" alt="Kanye West - Yeezus" />
-              <h3>Kanye West - Yeezus</h3>
-              <p class="price">70€</p>
-            </div>
-            <div class="card-back">
-              <p class="description">Yeezus est le sixième album studio de Kanye West, sorti en 2013. Il est distribué par Def Jam.</p>
-  
-              <!-- Description -->
-              <div class="detail">
-                <div class="Édition">
-                  <p> Édition : 2013</p>
-                </div>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7D2NdGvBHIavgLhmcwhluK?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-              </div>
-  
-              <a href="https://wa.me/+33768162985?text=Je%20veux%20acheter%20le%20Chrome%20Hearts%20Rick%20Owens%20Geobasket%20à%2012%20400€." target="_blank">
-                <button class="buy-button">Acheter maintenant !</button>
-              </a>
-            </div>
-          </div>
-        </div>
+  <div class="musique">
+    <h1>Musique</h1>
+    <p>Plongez dans l'univers des vinyles ultra-rares et trouvez les pépites des plus grands artistes</p>
 
-        <!-- Musique 3 - Wu-Tang Clan - Once Upon a Time in Shaolin -->
-        <div class="product">
-          <div class="card">
-            <div class="card-front">
-              <img src="@/assets/produit-wtc.png" alt="Wu-Tang Clan - Once Upon a Time in Shaolin" />
-              <h3>Wu-Tang Clan - Once Upon a Time in Shaolin</h3>
-              <p class="price">2000000€</p>
-            </div>
-            <div class="card-back">
-              <p class="description">Once Upon a Time in Shaolin est un double album du Wu-Tang Clan enregistré entre 2008 et 2013 et produit à un seul exemplaire.</p>
-  
-              <!-- Description -->
-              <div class="detail">
-                <div class="Édition">
-                  <p> Édition : unique </p>
-                </div>
-                <div class="Tracklist">
-                  <p>Tracklist : NC </p>
-                </div>
+    <!-- Liste des Musiques -->
+    <div class="products">
+      <div v-for="product in musiqueProducts" :key="product.id" class="product">
+        <div class="card">
+          <div class="card-front">
+            <img :src="product.image" :alt="product.name" />
+            <h3>{{ product.name }}</h3>
+            <p class="price">{{ product.price }}€</p>
+          </div>
+          <div class="card-back">
+            <p class="description">{{ product.description }}</p>
+            <!-- Description -->
+            <div class="detail">
+              <div class="Édition">
+                <p> Édition : {{ product.edition }}</p>
               </div>
-              <a href="https://wa.me/+33768162985?text=Je%20veux%20acheter%20le%20Chrome%20Hearts%20Rick%20Owens%20Geobasket%20à%2012%20400€." target="_blank">
-                <button class="buy-button">Acheter maintenant !</button>
-              </a>
+              <!-- Si un lien Spotify existe, l'intégrer -->
+              <div v-if="product.spotifyEmbedUrl">
+                <iframe
+                  :src="product.spotifyEmbedUrl"
+                  width="100%"
+                  height="152"
+                  frameborder="0"
+                  style="border-radius:12px"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
+            <a :href="'https://wa.me/+33768162985?text=Je%20veux%20acheter%20' + product.name + '%20à%20' + product.price + '€.'"
+              target="_blank">
+              <button class="buy-button">Acheter maintenant !</button>
+            </a>
           </div>
         </div>
-
-         <!-- Musique 4 - Michael Jackson – Thriller -->
-         <div class="product">
-          <div class="card">
-            <div class="card-front">
-              <img src="@/assets/produit-mj.png" alt="Michael Jackson – Thriller" />
-              <h3>Michael Jackson – Thriller</h3>
-              <p class="price">230€</p>
-            </div>
-            <div class="card-back">
-              <p class="description">Thriller est le sixième album studio de l'artiste américain Michael Jackson, son deuxième chez Epic Records. Coproduit par Quincy Jones, il sort le 30 novembre 1982, à la suite du succès commercial et critique de l'album Off the Wall (1979).</p>
-  
-              <!-- Description -->
-              <div class="detail">
-                <div class="Édition">
-                  <p> Édition : First Pressing 1982 </p>
-                </div>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2ANVost0y2y52ema1E9xAZ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-              </div>
-  
-              <a href="https://wa.me/+33768162985?text=Je%20veux%20acheter%20le%20Chrome%20Hearts%20Rick%20Owens%20Geobasket%20à%2012%20400€." target="_blank">
-                <button class="buy-button">Acheter maintenant !</button>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Musique 5 - Jimi Hendrix – Are You Experienced -->
-        <div class="product">
-          <div class="card">
-            <div class="card-front">
-              <img src="@/assets/produit-jh.png" alt="Jimi Hendrix – Are You Experienced" />
-              <h3>Jimi Hendrix – Are You Experienced</h3>
-              <p class="price">110€</p>
-            </div>
-            <div class="card-back">
-              <p class="description">Are You Experienced est le premier album du groupe The Jimi Hendrix Experience, sorti en 1967.</p>
-  
-              <!-- Description -->
-              <div class="detail">
-                <div class="Édition">
-                  <p> Édition : First Pressing 1967</p>
-                </div>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7rSZXXHHvIhF4yUFdaOCy9?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-              </div>
-  
-              <a href="https://wa.me/+33768162985?text=Je%20veux%20acheter%20le%20Chrome%20Hearts%20Rick%20Owens%20Geobasket%20à%2012%20400€." target="_blank">
-                <button class="buy-button">Acheter maintenant !</button>
-              </a>
-            </div>
-          </div>
-        </div>
-  
       </div>
     </div>
 
     <div class="currency-converter-section">
-    <p>If you want to know our prices in dollars, pounds and yen, you can use our real-time currency converter.</p>
-    <router-link to="/conversion"> <!-- Enlève .vue -->
+      <p>If you want to know our prices in dollars, pounds, and yen, you can use our real-time currency converter.</p>
+      <router-link to="/conversion">
         <button class="currency-button">Go to Currency Converter</button>
-    </router-link>
+      </router-link>
     </div>
-  
-  </template>
-  
-  
+  </div>
+</template>
+
 <script setup>
-import { onMounted } from 'vue';
-onMounted(() => {
-  window.scrollTo(0, 0);
-});
+import { computed } from 'vue';
+import { useMusiqueStore } from '@/stores/musiqueStore';
+
+const musiqueStore = useMusiqueStore();
+const musiqueProducts = computed(() => musiqueStore.getAllMusiqueProducts);
 
 </script>
 
 
-  <style scoped>
+<style scoped>
   .musique {
     text-align: center;
     padding: 20px;
