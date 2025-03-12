@@ -3,27 +3,27 @@
     <!-- Section des catégories -->
     <section class="categories">     
       <div class="category" @click="goToCategory('archive')">
-        <img src="@/assets/archives.png" alt="Pièces d'archive" />
+        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765203/archives_zdwmll.png" alt="Pièces d'archive" />
         <p>Archive</p>
       </div>
       <div class="category" @click="goToCategory('luxe')">
-        <img src="@/assets/luxe.png" alt="Luxe" />
+        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765238/luxe_yxtf61.png" alt="Luxe" />
         <p>Luxe</p>
       </div>
       <div class="category" @click="goToCategory('sneakers')">
-        <img src="@/assets/sneakers.png" alt="Sneakers" />
+        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764896/sneakers_qhxaah.png" alt="Sneakers" />
         <p>Sneakers</p>
       </div>
       <div class="category" @click="goToCategory('musique')">
-        <img src="@/assets/musique.png" alt="Musique" />
+        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765299/musique_lmcftr.png" alt="Musique" />
         <p>Musique</p>
       </div>
       <div class="category" @click="goToCategory('parfums')">
-        <img src="@/assets/parfum.png" alt="Parfums" />
+        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765299/parfum_v7h9rn.jpg" alt="Parfums" />
         <p>Parfums</p>
       </div>
       <div class="category" @click="goToCategory('personal-shopper')">
-        <img src="@/assets/aurum.png" alt="Personal Shopper" />
+        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765385/aurum_gzeebg.png" alt="Personal Shopper" />
         <p>Personal Shopper</p>
       </div>
     </section>

@@ -1,7 +1,7 @@
 <template>
   <header :class="{ shrink: isShrunk }" @mouseover="showSearch = true" @mouseleave="showSearch = false">
     <img 
-      src="@/assets/Aurum.png" 
+      src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765385/aurum_gzeebg.png" 
       alt="Aurum Logo" 
       class="logo" 
       @click="goToHome"

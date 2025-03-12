@@ -12,8 +12,8 @@ export const useLuxeStore = defineStore('luxe', {
         size: '40',
         composition: '88% Viscose, 12% Soie',
         images: [
-          '/src/assets/produit-rickowenstanktop.png',
-          '/src/assets/produit-rickowenstanktop2.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764893/produit-rickowenstanktop_hc23zd.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764893/produit-rickowenstanktop2_lhdsyv.png',
         ],
       },
       {
@@ -25,8 +25,8 @@ export const useLuxeStore = defineStore('luxe', {
         size: 'L',
         composition: 'Fausse fourrure, intérieur en viscose',
         images: [
-          '/src/assets/produit-margielafauxfur.png',
-          '/src/assets/produit-margielafauxfur2.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764872/produit-margielafauxfur_ngrre4.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764872/produit-margielafauxfur2_jru592.png',
         ],
       },
       {
@@ -38,8 +38,8 @@ export const useLuxeStore = defineStore('luxe', {
         size: 'XL',
         composition: '50% coton, 36% laine, 7% polyester, 6% rayonne, 1% nylon',
         images: [
-          '/src/assets/produit-junya.png',
-          '/src/assets/produit-junya2.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764870/produit-junya_vb7fr4.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764870/produit-junya2_lbagjd.png',
         ],
       },
       {
@@ -51,8 +51,8 @@ export const useLuxeStore = defineStore('luxe', {
         size: '52',
         composition: '95% Laine, 5% Polyester',
         images: [
-          '/src/assets/produit-saintlaurent.png',
-          '/src/assets/produit-saintlaurent2.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764893/produit-saintlaurent_cjiw8c.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764894/produit-saintlaurent2_pbar8u.png',
         ],
       },
       {
@@ -64,8 +64,8 @@ export const useLuxeStore = defineStore('luxe', {
         size: '40',
         composition: 'EVA (éthylène-acétate de vinyle)',
         images: [
-          '/src/assets/produit-balenciagasteroid.png',
-          '/src/assets/produit-balenciagasteroid2.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764870/produit-balenciagasteroid_qkfo1v.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764870/produit-balenciagasteroid2_by6tkq.png',
         ],
       },
       {
@@ -77,8 +77,8 @@ export const useLuxeStore = defineStore('luxe', {
         size: 'Unique',
         composition: '100% cuir de veau',
         images: [
-          '/src/assets/produit-bottegacravate.png',
-          '/src/assets/produit-bottegacravate2.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764869/produit-bottegacravate_lfwxdv.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764870/produit-bottegacravate2_ajhl7t.png',
         ],
       },
       {
@@ -90,8 +90,8 @@ export const useLuxeStore = defineStore('luxe', {
         size: 'Unique',
         composition: '100% cuir de veau souple, Doublure en cuir d\'agneau',
         images: [
-          '/src/assets/produit-speedy.png',
-          '/src/assets/produit-speedy2.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764894/produit-speedy_ckmlzv.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764894/produit-speedy2_hgptch.png',
         ],
       },
       {
@@ -103,8 +103,8 @@ export const useLuxeStore = defineStore('luxe', {
         size: '40',
         composition: '60% Mohair, 40% Laine Vierge',
         images: [
-          '/src/assets/produit-prada.png',
-          '/src/assets/produit-prada2.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764887/produit-prada_pxds8t.png',
+          'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764893/produit-prada2_tibdun.png',
         ],
       },
     ],
