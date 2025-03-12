@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 https://github.com/duzgunmrl/aurum.git
 .vercel
+.env
+

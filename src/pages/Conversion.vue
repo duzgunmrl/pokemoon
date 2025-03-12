@@ -30,7 +30,7 @@
     if (!amountEUR.value) return;
   
     try {
-      const response = await fetch("https://v6.exchangerate-api.com/v6/5510a88b0806809e5fd84f60/latest/EUR");
+      const response = await fetch(`https://v6.exchangerate-api.com/v6/${import.meta.env.VITE_APIKEY}/latest/EUR`);
       const data = await response.json();
       const rateUSD = data.conversion_rates.USD; // Taux EUR ➝ USD
       const rateGBP = data.conversion_rates.GBP; // Taux EUR ➝ GBP
