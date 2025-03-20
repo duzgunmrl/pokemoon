@@ -86,20 +86,9 @@
   </script>
   
   <style scoped>
-  .article-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
+
   .section {
     margin-bottom: 40px;
-  }
-  
-  .article-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
   }
   
   .intro-text {

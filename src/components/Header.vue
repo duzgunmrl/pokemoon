@@ -6,13 +6,14 @@
       class="logo" 
       @click="goToHome"
     />
-    
+    <!-- Condition pour afficher la barre de recherche uniquement si showSearchBar est vrai et showSearch est vrai -->
     <input 
-      v-show="showSearch"
+      v-show="props.showSearchBar && showSearch" 
       type="text" 
       v-model="searchQuery" 
       placeholder="Rechercher..." 
       class="search-bar"
+      v-if="showSearchBar"
     />
   </header>
 </template>
@@ -21,8 +22,13 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 
+// Définir la prop showSearchBar, qui contrôle l'affichage de la barre de recherche
+const props = defineProps({
+  showSearchBar: { type: Boolean, default: true }
+});
+
 const searchQuery = ref('');
-const showSearch = ref(true);
+const showSearch = ref(false);  // La barre de recherche est masquée au début
 const isShrunk = ref(false);
 const router = useRouter();
 
@@ -53,17 +59,16 @@ header {
   width: 100%;
   transition: all 0.3s ease;
   z-index: 1000;
-  height: 80; /* Hauteur initiale */
+  height: 80px; /* Hauteur initiale */
   will-change: transform, opacity;
 }
 
 /* Effet rétrécissement au scroll */
 .shrink {
-  transform: translateY(-10px) scale(1); /* Légère réduction visuelle */
+  transform: translateY(-10px) scale(1);
   background-color: rgba(255, 255, 255, 0.85);
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-
 
 .logo {
   max-width: 80px;
@@ -73,7 +78,7 @@ header {
 }
 
 .shrink .logo {
-  max-width: 60px; /* Réduction au scroll */
+  max-width: 60px;
 }
 
 /* Barre de recherche */
@@ -90,7 +95,7 @@ header {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Apparition fluide */
+/* Apparition lors du survol */
 header:hover .search-bar {
   opacity: 1;
   transform: translateY(0);

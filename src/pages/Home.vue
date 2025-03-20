@@ -177,6 +177,7 @@ body {
   transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out;
 }
 
+
 /* Ajout d'un texte sur l'image au survol */
 .carousel-text {
   position: absolute;
@@ -194,6 +195,7 @@ body {
   text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .v-carousel-item:hover .carousel-text {

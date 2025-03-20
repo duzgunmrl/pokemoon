@@ -1,6 +1,6 @@
 <template>
   <v-app> 
-    <Header></Header>
+    <Header :showSearchBar="showSearchBar" /> 
     <RouterView></RouterView>
     <Footer></Footer>
   </v-app>
@@ -8,13 +8,19 @@
 
 
 <script setup>
-import { RouterView } from 'vue-router';
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
-const goToCategory = (category) => {
-  console.log(`Naviguer vers la catégorie: ${category}`);
-  // Ajoute ici la logique de navigation vers les autres pages
-}
+
+// Utiliser la route active pour déterminer l'affichage de la barre de recherche
+const route = useRoute();
+
+const showSearchBar = computed(() => {
+  console.log(route.path)
+  // Liste des pages où tu veux masquer la barre de recherche
+  return !['/mentionslegales'].includes(route.path); 
+});
 </script>
 
 <style scoped>

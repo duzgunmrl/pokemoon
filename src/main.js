@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import './style.css';
 import App from './App.vue';
 import { createPinia } from 'pinia';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -10,8 +11,6 @@ import Sneakers from './pages/articles/Sneakers.vue';
 import Musique from './pages/articles/Musique.vue';
 import PersonalShopper from './pages/articles/PersonalShopper.vue';
 import vuetify from './plugins/vuetify'; 
-
-// Assurez-vous d'importer le composant BlogArticle ici
 import BlogArticle from './pages/blog/BlogArticle.vue';
 import Conversion from './pages/Conversion.vue';
 import MentionsLegales from './pages/MentionsLegales.vue';
@@ -38,8 +37,7 @@ const router = createRouter({
 const app = createApp(App);
 const pinia = createPinia()
 
-// Déplace l'appel à app.use(pinia) avant app.mount()
-app.use(pinia);  // Ajoute Pinia avant de monter l'application
+app.use(pinia);  
 app.use(router);
 app.use(vuetify);
 app.mount('#app');

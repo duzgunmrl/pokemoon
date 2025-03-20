@@ -1,5 +1,7 @@
 <template>
   <div class="article-container">
+    <!-- Ici, la prop showSearchBar est passée à false -->
+    
     <!-- Introduction -->
     <section class="intro">
       <p class="intro-text">
@@ -118,22 +120,10 @@ const goToNextArticle = () => {
 </script>
 
 <style scoped>
-.article-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
 
 .section {
   margin-bottom: 40px;
 }
-
-.article-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
 .intro-text {
   margin-top: 10px;
   font-weight: bold;
