@@ -34,6 +34,8 @@
       </div>
     </div>
 
+    <ParfumInstaButton />
+
     <!-- Section Convertisseur de devises -->
     <div class="currency-converter-section">
       <p>If you want to know our prices in dollars, pounds and yen, you can use our real-time currency converter.</p>
@@ -47,10 +49,13 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useParfumsStore } from '@/stores/parfumsStore';
+import ParfumInstaButton from '@/components/ParfumInstaButton.vue';
 
 // Accéder à la store
 const parfumsStore = useParfumsStore();
 const parfumsProducts = ref(parfumsStore.parfumsProducts);
+
+
 
 // Initialisation du scroll
 onMounted(() => {
