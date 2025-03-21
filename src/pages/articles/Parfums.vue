@@ -33,8 +33,9 @@
         </div>
       </div>
     </div>
-
-    <ParfumInstaButton />
+    <ParfumInstaButton>
+    Un parfum à gagner sur instagram 
+    </ParfumInstaButton>
 
     <!-- Section Convertisseur de devises -->
     <div class="currency-converter-section">

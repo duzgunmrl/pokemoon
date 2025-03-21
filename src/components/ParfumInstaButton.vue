@@ -5,7 +5,9 @@
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Insta" />
       </div>
     </div>
-    <span class="text">Découvre notre page de parfumerie !</span>
+    <div class="text">
+      <slot>Découvrez notre page Instagram de parfumerie</slot>
+    </div>
   </div>
 </template>
 
@@ -16,7 +18,6 @@ const goToInsta = () => {
 </script>
 
 <style scoped>
-
 .insta-wrapper {
   position: fixed;
   bottom: 20px;
