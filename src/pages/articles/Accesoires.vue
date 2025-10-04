@@ -1,11 +1,11 @@
 <template>
-  <div class="sneakers">
-    <h1>Sneakers</h1>
-    <p>Découvrez notre sélection de Sneakers iconiques et limitées</p>
+  <div class="accesoires">
+    <h1>Accesoires</h1>
+    <p>Découvrez notre sélection d'accessoires pour protéger votre collection.</p>
 
-    <!-- Liste des Sneakers -->
+    <!-- Liste des accesoires -->
     <div class="products">
-      <div v-for="product in sneakersProducts" :key="product.id" class="product">
+      <div v-for="product in accesoiresProducts" :key="product.id" class="product">
         <div class="card">
           <div class="card-front">
             <img :src="product.image" :alt="product.name" />
@@ -16,13 +16,7 @@
             <p class="description">{{ product.description }}</p>
             <div class="detail">
               <div class="État">
-                <p> État : {{ product.condition }}</p>
-              </div>
-              <div class="SKU">
-                <p> SKU : {{ product.sku }}</p>
-              </div>
-              <div class="Taille">
-                <p>Pointure : {{ product.size }}</p>
+                <p> Dimensions : {{ product.condition }}</p>
               </div>
             </div>
             <a :href="'https://wa.me/+33768162985?text=Je%20veux%20acheter%20le%20' + product.name + '%20à%20' + product.price + '€.'" target="_blank">
@@ -32,23 +26,16 @@
         </div>
       </div>
     </div>
-
-    <div class="currency-converter-section">
-      <p>If you want to know our prices in dollars, pounds and yen, you can use our real-time currency converter.</p>
-      <router-link to="/conversion">
-        <button class="currency-button">Go to Currency Converter</button>
-      </router-link>
-    </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { useSneakersStore } from '@/stores/sneakersStore';
+import { useaccesoiresStore } from '@/stores/accesoiresStore';
 
 // Accéder à la store
-const sneakersStore = useSneakersStore();
-const sneakersProducts = ref(sneakersStore.sneakersProducts);
+const accesoiresStore = useaccesoiresStore();
+const accesoiresProducts = ref(accesoiresStore.accesoiresProducts);
 
 // Initialisation du scroll
 onMounted(() => {
@@ -57,7 +44,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.sneakers {
+.accesoires {
   text-align: center;
   padding: 20px;
 }

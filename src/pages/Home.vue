@@ -2,29 +2,17 @@
   <div id="app">
     <!-- Section des catégories -->
     <section class="categories">     
-      <div class="category" @click="goToCategory('archive')">
-        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765203/archives_zdwmll.png" alt="Pièces d'archive" />
-        <p>Archive</p>
+      <div class="category" @click="goToCategory('TCG')">
+        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759586942/606335_wy10vf.png" alt="TCG" />
+        <p>TCG</p>
       </div>
-      <div class="category" @click="goToCategory('luxe')">
-        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765238/luxe_yxtf61.png" alt="Luxe" />
-        <p>Luxe</p>
+      <div class="category" @click="goToCategory('Cartes')">
+        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759587127/cartes_a_l_unitees_nmakv7.webp" alt="Cartes" />
+        <p>Cartes</p>
       </div>
-      <div class="category" @click="goToCategory('sneakers')">
-        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741764896/sneakers_qhxaah.png" alt="Sneakers" />
-        <p>Sneakers</p>
-      </div>
-      <div class="category" @click="goToCategory('musique')">
-        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765299/musique_lmcftr.png" alt="Musique" />
-        <p>Musique</p>
-      </div>
-      <div class="category" @click="goToCategory('parfums')">
-        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765299/parfum_v7h9rn.jpg" alt="Parfums" />
-        <p>Parfums</p>
-      </div>
-      <div class="category" @click="goToCategory('personal-shopper')">
-        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1741765385/aurum_gzeebg.png" alt="Personal Shopper" />
-        <p>Personal Shopper</p>
+      <div class="category" @click="goToCategory('Accesoires')">
+        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759587203/shoppingPhotoroompng_6877a9cca82701.50474100_g5zluu.png" alt="Accesoires" />
+        <p>Accesoires</p>
       </div>
     </section>
 
@@ -73,20 +61,12 @@ export default {
     return {
       items: [
   {
-    src: 'https://images.ctfassets.net/1aemqu6a6t65/e4y4ebPM9oNHoSPyTEgAf/3e0ab27f4b882c1dd391e318c83dcd2c/Supreme_Manhattan_NYC_Photo_Gabby-Jones_137.jpg',
-    category: 'blog-Comment Supreme est devenu le roi du Streetwear'
+    src: 'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759590117/what-was-your-favorite-team-rocket-intro-v0-yagjw6utrpfb1_dipj0i.webp',
+    category: 'blog-La Team Rocket est de retour'
   },
   {
-    src: 'https://media-cdn.printemps.com/image/46/5/2522465.jpg',
-    category: 'blog-Le genie de Rick Owens'
-  },
-  {
-    src: 'https://cdn-azure.notinoimg.com/cdn-cgi/image/w=1040,q=80/blog/article/blog_nicheparfmyZaMa230270ret169_7da2c4.jpg',
-    category: 'blog-Sentir bon pendant toute une annee'
-  },
-  {
-    src: 'https://highxtar.com/wp-content/uploads/2019/11/highxtar-margiela-masks-13-2.jpg',
-    category: 'blog-Le fantome de la mode'
+    src: 'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759589890/61fecf9b9454d-42_wkudtg.jpg',
+    category: 'blog-Pourquoi les cartes Pokémon fascinent encore 30 ans après'
   },
 ],
     };

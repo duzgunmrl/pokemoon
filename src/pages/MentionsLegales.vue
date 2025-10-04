@@ -2,24 +2,24 @@
     <div class="article-container">
       <!-- Introduction -->
       <section class="intro">
-        <p class="intro-text">Mentions légales, CGV et Protection des données de AURUM</p>
+        <p class="intro-text">Mentions légales, CGV et Protection des données de Poké'Moon</p>
       </section>
   
       <!-- Mentions légales -->
       <section class="section">
         <h2>Mentions légales</h2>
-        <p><strong>Propriétaire du site :</strong> AURUM, entreprise individuelle</p>
-        <p><strong>Siège social :</strong> 56 rue du Lac, 69003 Lyon, France</p>
+        <p><strong>Propriétaire du site :</strong> Poké'Moon, entreprise individuelle</p>
+        <p><strong>Siège social :</strong> 69003 Lyon, France</p>
         <p><strong>Contact :</strong> <a href="mailto:help.aurumstore@gmail.com">help.aurumstore@gmail.com</a></p>
-        <p><strong>Hébergement :</strong> MERAL Duzguncan</p>
-        <p><strong>Directeur de la publication :</strong> MERAL Duzguncan</p>
+        <p><strong>Hébergement :</strong>Aurum</p>
+        <p><strong>Directeur de la publication :</strong>Pokémoon</p>
       </section>
   
       <!-- Conditions Générales de Vente -->
       <section class="section">
         <h2>Conditions Générales de Vente (CGV)</h2>
         <p><strong>1. Introduction</strong></p>
-        <p>Les présentes CGV régissent la vente des produits proposés sur le site AURUM. En passant commande, le client accepte ces conditions sans réserve.</p>
+        <p>Les présentes CGV régissent la vente des produits proposés sur le site Poké'Moon. En passant commande, le client accepte ces conditions sans réserve.</p>
         <p><strong>2. Produits</strong></p>
         <p>Les produits sont des articles exclusifs, rares et uniques dans les catégories archive, luxe, parfums, sneakers, vinyles et personnal shopper.</p>
         <p><strong>3. Commande</strong></p>
@@ -29,11 +29,11 @@
         <p><strong>5. Paiement</strong></p>
         <p>Le paiement peut être effectué par virement bancaire ou PayPal.</p>
         <p><strong>6. Livraison</strong></p>
-        <p>Les produits sont expédiés après réception du paiement. AURUM ne pourra être responsable des retards de livraison.</p>
+        <p>Les produits sont expédiés après réception du paiement. Poké'Moon ne pourra être responsable des retards de livraison.</p>
         <p><strong>7. Retour et Remboursement</strong></p>
         <p>Les retours sont acceptés en cas de produits défectueux ou non conformes. Les frais de retour sont à la charge du client, sauf en cas de défaut de produit.</p>
         <p><strong>8. Responsabilité</strong></p>
-        <p>AURUM ne pourra être tenue responsable des dommages résultant de l’utilisation des produits.</p>
+        <p>Poké'Moon ne pourra être tenue responsable des dommages résultant de l’utilisation des produits.</p>
       </section>
   
       <!-- Protection des données -->
@@ -46,7 +46,7 @@
         <p><strong>3. Consentement</strong></p>
         <p>En passant commande, vous acceptez le traitement de vos données personnelles.</p>
         <p><strong>4. Sécurité des données</strong></p>
-        <p>AURUM prend des mesures pour garantir la sécurité des données personnelles collectées.</p>
+        <p>Poké'Moon prend des mesures pour garantir la sécurité des données personnelles collectées.</p>
         <p><strong>5. Droit d’accès, de rectification et de suppression</strong></p>
         <p>Conformément à la loi "Informatique et Libertés", vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles.</p>
       </section>
@@ -54,7 +54,7 @@
       <!-- Modifications des mentions légales et des CGV -->
       <section class="section">
         <h2>Modifications des mentions légales et des CGV</h2>
-        <p>AURUM se réserve le droit de modifier ces mentions légales, CGV et la politique de protection des données à tout moment.</p>
+        <p>Poké'Moon se réserve le droit de modifier ces mentions légales, CGV et la politique de protection des données à tout moment.</p>
       </section>
   
     </div>
