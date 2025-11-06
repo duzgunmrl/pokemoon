@@ -5,19 +5,28 @@ export const useTCGStore = defineStore('TCG', {
     TCGProducts: [
 
       {
+        id: 8,
+        name: ' UPC Mega Dracaufeu X Ex',
+        price: '250',
+        image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459164/pokupc25_box3d_20250905_umq5dc.png',
+        description: 'Contient 2 cartes promo (Méga-Dracaufeu X et Plumeline ex), 18 boosters du JCC Pokémon de diverses séries et des es accessoires exclusifs.',
+        stock: '⚠️ Quantité Faible'
+      },
+
+      {
         id: 7,
         name: ' Tripack ME02 - Flammes Fantasmagoriques',
         price: '20€',
-        image: 'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759586119/7CB1ABE6-14B4-4688-BBB1-885571741B41_ukrg6s.jpg',
-        description: 'Contient 12 boosters de la série ME01, une carte promo et des goodies. Modèle aléatoire. Vendu avec une protection souple.',
-        stock: '⚠️ Quantité Faible'
+        image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459164/Capture_d_e%CC%81cran_2025-11-06_a%CC%80_20.55.58_vrnkne.png',
+        description: 'Contient 3 boosters de la série ME02 et une carte promo',
+        stock: '⚠️ Dernier article'
       },
 
       {
         id: 6,
         name: ' ETB ME02 - Flammes Fantasmagoriques',
         price: '95€',
-        image: 'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759586119/7CB1ABE6-14B4-4688-BBB1-885571741B41_ukrg6s.jpg',
+        image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459164/me02-etb-fr-2x_mk0amy.png',
         description: 'Contient 9 boosters de la série ME02, une carte promo et des goodies. Vendu avec une protection souple.',
         stock: '⚠️ Quantité Faible'
       },
@@ -28,7 +37,6 @@ export const useTCGStore = defineStore('TCG', {
         price: 'RUPTURE',
         image: 'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759586119/7CB1ABE6-14B4-4688-BBB1-885571741B41_ukrg6s.jpg',
         description: 'Contient 12 boosters de la série ME01, une carte promo et des goodies. Modèle aléatoire. Vendu avec une protection souple.',
-        stock: '⚠️ Dernier article'
       },
       {
         id: 2,
