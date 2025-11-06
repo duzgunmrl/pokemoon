@@ -7,7 +7,7 @@ export const useTCGStore = defineStore('TCG', {
       {
         id: 8,
         name: ' UPC Mega Dracaufeu X Ex',
-        price: '250',
+        price: '250€',
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459164/pokupc25_box3d_20250905_umq5dc.png',
         description: 'Contient 2 cartes promo (Méga-Dracaufeu X et Plumeline ex), 18 boosters du JCC Pokémon de diverses séries et des es accessoires exclusifs.',
         stock: '⚠️ Quantité Faible'
