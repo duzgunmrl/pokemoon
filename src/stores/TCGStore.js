@@ -5,13 +5,23 @@ export const useTCGStore = defineStore('TCG', {
     TCGProducts: [
 
       {
-        id: 8,
+        id: 9,
         name: ' UPC Mega Dracaufeu X Ex',
         price: '250€',
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459164/pokupc25_box3d_20250905_umq5dc.png',
         description: 'Contient 2 cartes promo (Méga-Dracaufeu X et Plumeline ex), 18 boosters du JCC Pokémon de diverses séries et des es accessoires exclusifs.',
         stock: '⚠️ Quantité Faible'
       },
+
+      {
+        id: 8,
+        name: ' Display ME02 - Flammes Fantasmagoriques',
+        price: '290€',
+        image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459524/me02-booster-display-fr-2x_iqmag7.png',
+        description: 'Contient 36 boosters de la série ME02.',
+        stock: '⚠️ Dernier article'
+      },
+
 
       {
         id: 7,
