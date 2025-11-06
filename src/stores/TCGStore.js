@@ -3,10 +3,29 @@ import { defineStore } from 'pinia';
 export const useTCGStore = defineStore('TCG', {
   state: () => ({
     TCGProducts: [
+
+      {
+        id: 7,
+        name: ' Tripack ME02 - Flammes Fantasmagoriques',
+        price: '20€',
+        image: 'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759586119/7CB1ABE6-14B4-4688-BBB1-885571741B41_ukrg6s.jpg',
+        description: 'Contient 12 boosters de la série ME01, une carte promo et des goodies. Modèle aléatoire. Vendu avec une protection souple.',
+        stock: '⚠️ Quantité Faible'
+      },
+
+      {
+        id: 6,
+        name: ' ETB ME02 - Flammes Fantasmagoriques',
+        price: '95€',
+        image: 'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759586119/7CB1ABE6-14B4-4688-BBB1-885571741B41_ukrg6s.jpg',
+        description: 'Contient 9 boosters de la série ME02, une carte promo et des goodies. Vendu avec une protection souple.',
+        stock: '⚠️ Quantité Faible'
+      },
+
       {
         id: 1,
         name: 'Lot ME01 - Méga Évolution',
-        price: '105€',
+        price: 'RUPTURE',
         image: 'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759586119/7CB1ABE6-14B4-4688-BBB1-885571741B41_ukrg6s.jpg',
         description: 'Contient 12 boosters de la série ME01, une carte promo et des goodies. Modèle aléatoire. Vendu avec une protection souple.',
         stock: '⚠️ Dernier article'
