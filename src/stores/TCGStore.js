@@ -4,6 +4,16 @@ export const useTCGStore = defineStore('TCG', {
   state: () => ({
     TCGProducts: [
 
+
+      {
+        id: 10,
+        name: ' UPC Sulfura de la Team Rocket',
+        price: '240€',
+        image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1763718003/UPCSULF_hkksvb.png',
+        description: 'Contient 3 cartes promo Sulfura de la Team Rocket, 18 boosters du JCC Pokémon de diverses séries et des accessoires exclusifs.',
+        stock: '⚠️ Quantité Faible'
+      },
+
       {
         id: 9,
         name: ' UPC Mega Dracaufeu X Ex',
