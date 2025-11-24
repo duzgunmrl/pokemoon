@@ -3,7 +3,7 @@
     <!-- Section des catégories -->
     <section class="categories">     
       <div class="category" @click="goToCategory('TCG')">
-        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759586942/606335_wy10vf.png" alt="TCG" />
+        <img src="https://res.cloudinary.com/dxa5pwuty/image/upload/v1763993406/erb2_gehdzg.jpg" alt="TCG" />
         <p>TCG</p>
       </div>
       <div class="category" @click="goToCategory('Cartes')">
@@ -11,7 +11,7 @@
         <p>Cartes</p>
       </div>
       <div class="category" @click="goToCategory('Accesoires')">
-        <img src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759587203/shoppingPhotoroompng_6877a9cca82701.50474100_g5zluu.png" alt="Accesoires" />
+        <img src="https://res.cloudinary.com/dxa5pwuty/image/upload/v1763993795/sleeve_ll3dhn.jpg" alt="Accesoires" />
         <p>Accesoires</p>
       </div>
     </section>
