@@ -16,23 +16,6 @@
       </div>
     </section>
 
-    <h2 class="carousel-title">BLOG</h2>      
-    <v-carousel :show-arrows="false"
-      cycle 
-      interval="5000"
-      class="my-carousel"
-    >
-      <v-carousel-item
-        v-for="(item, i) in items"
-        :key="i"
-        :src="item.src"
-        cover
-        @click="goToCategory(item.category)"
-      >
-        <!-- Enlever "blog-" du texte affiché -->
-        <div class="carousel-text">{{ item.category.replace('blog-', '').replace(/([A-Z])/g, ' $1').trim() }}</div>
-      </v-carousel-item>
-    </v-carousel>
   </div>
 </template>
 
@@ -51,26 +34,6 @@ const goToCategory = (category) => {
     router.push(`/articles/${category}`);
   }
   console.log(`Naviguer vers la catégorie: ${category}`);
-};
-</script>
-
-
-<script>
-export default {
-  data() {
-    return {
-      items: [
-  {
-    src: 'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759590117/what-was-your-favorite-team-rocket-intro-v0-yagjw6utrpfb1_dipj0i.webp',
-    category: 'blog-La Team Rocket est de retour'
-  },
-  {
-    src: 'https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759589890/61fecf9b9454d-42_wkudtg.jpg',
-    category: 'blog-Pourquoi les cartes Pokémon fascinent encore 30 ans après'
-  },
-],
-    };
-  }
 };
 </script>
 

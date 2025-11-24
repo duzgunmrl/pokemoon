@@ -8,8 +8,6 @@ import TCG from './pages/articles/TCG.vue';
 import Cartes from './pages/articles/Cartes.vue';
 import Accesoires from './pages/articles/Accesoires.vue';
 import vuetify from './plugins/vuetify'; 
-import BlogArticle from './pages/blog/BlogArticle.vue';
-import Conversion from './pages/Conversion.vue';
 import MentionsLegales from './pages/MentionsLegales.vue';
 
 const routes = [
@@ -17,8 +15,6 @@ const routes = [
   { path: '/articles/Cartes', component: Cartes },
   { path: '/articles/TCG', component: TCG },
   { path: '/articles/Accesoires', component: Accesoires },
-  { path: '/blog/:title', component: BlogArticle },
-  { path: '/conversion', component: Conversion},
   { path: '/mentionslegales', component : MentionsLegales},
     // La route qui utilise le composant dynamique
 ];
