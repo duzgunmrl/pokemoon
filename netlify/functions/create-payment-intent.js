@@ -1,17 +1,36 @@
-import Stripe from "stripe";
+const Stripe = require("stripe");
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+exports.handler = async (event) => {
+  console.log("🚀 Function triggered!");
 
-export const handler = async (event) => {
   try {
-    const body = JSON.parse(event.body);
-    const amount = body.amount;
+    const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
+
+    if (!process.env.STRIPE_SECRET_KEY) {
+      console.error("❌ Missing secret key");
+      return {
+        statusCode: 500,
+        body: "Missing STRIPE_SECRET_KEY"
+      };
+    }
+
+    const body = event.body ? JSON.parse(event.body) : null;
+
+    if (!body || !body.amount) {
+      console.error("❌ No amount provided");
+      return {
+        statusCode: 400,
+        body: "Missing amount"
+      };
+    }
 
     const paymentIntent = await stripe.paymentIntents.create({
-      amount,
+      amount: body.amount,
       currency: "eur",
       automatic_payment_methods: { enabled: true }
     });
+
+    console.log("✅ PaymentIntent created:", paymentIntent.id);
 
     return {
       statusCode: 200,
@@ -21,9 +40,10 @@ export const handler = async (event) => {
     };
 
   } catch (error) {
+    console.error("💥 ERROR in function:", error);
     return {
-      statusCode: 400,
-      body: JSON.stringify({ error: error.message })
+      statusCode: 500,
+      body: "Error: " + error.message
     };
   }
 };

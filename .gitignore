@@ -26,3 +26,6 @@ https://github.com/duzgunmrl/aurum.git
 .vercel
 .env
 
+
+# Local Netlify folder
+.netlify
