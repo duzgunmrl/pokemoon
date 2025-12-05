@@ -9,6 +9,9 @@ import Cartes from './pages/articles/Cartes.vue';
 import Accesoires from './pages/articles/Accesoires.vue';
 import vuetify from './plugins/vuetify'; 
 import MentionsLegales from './pages/MentionsLegales.vue';
+import CartView from './views/CartView.vue';
+import Paiement from './views/Paiement.vue';
+
 
 const routes = [
   { path: '/', component: Home },
@@ -16,6 +19,8 @@ const routes = [
   { path: '/articles/TCG', component: TCG },
   { path: '/articles/Accesoires', component: Accesoires },
   { path: '/mentionslegales', component : MentionsLegales},
+  { path: '/cart', component: CartView },
+  { path: '/paiement', component: Paiement },
     // La route qui utilise le composant dynamique
 ];
 

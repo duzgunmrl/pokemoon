@@ -15,12 +15,22 @@
       class="search-bar"
       v-if="showSearchBar"
     />
+    <div class="cart-wrapper" v-show="showSearch"> 
+    <router-link to="/cart" class="cart-button">
+    🛒 <span class="count">{{ cart.totalItems }}</span>
+    </router-link>
+</div>
+
   </header>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
+
+import { useCartStore } from '@/stores/CartStore';
+const cart = useCartStore();
+
 
 // Définir la prop showSearchBar, qui contrôle l'affichage de la barre de recherche
 const props = defineProps({
@@ -52,16 +62,57 @@ onUnmounted(() => {
 <style scoped>
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* ← ici ! */
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
   position: sticky;
   top: 0;
   width: 100%;
+  height: 80px;
   transition: all 0.3s ease;
   z-index: 1000;
-  height: 80px; /* Hauteur initiale */
-  will-change: transform, opacity;
 }
+
+.cart-wrapper {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+header:hover .cart-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bouton stylé */
+.cart-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #140126;
+  color: black;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cart-button:hover {
+  background: #f2c400;
+  transform: translateY(-2px);
+}
+
+/* Compteur */
+.count {
+  background: black;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 13px;
+}
+
 
 /* Effet rétrécissement au scroll */
 .shrink {
