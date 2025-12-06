@@ -7,14 +7,13 @@
       @click="goToHome"
     />
     <!-- Condition pour afficher la barre de recherche uniquement si showSearchBar est vrai et showSearch est vrai -->
-    <input 
-      v-show="props.showSearchBar && showSearch" 
-      type="text" 
-      v-model="searchQuery" 
-      placeholder="Rechercher..." 
+    <input
+      v-model="search.query"
+      @keyup.enter="goSearch"
+      placeholder="Rechercher..."
       class="search-bar"
-      v-if="showSearchBar"
     />
+
     <div class="cart-wrapper" v-show="showSearch"> 
     <router-link to="/cart" class="cart-button">
     🛒 <span class="count">{{ cart.totalItems }}</span>
@@ -27,25 +26,38 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
-
+import { useSearchStore } from '@/stores/SearchStore';
 import { useCartStore } from '@/stores/CartStore';
+
+// Stores
+const search = useSearchStore();
 const cart = useCartStore();
 
+// Router (UNE SEULE FOIS)
+const router = useRouter();
 
-// Définir la prop showSearchBar, qui contrôle l'affichage de la barre de recherche
+// Navigation par recherche
+const goSearch = () => {
+  if (router.currentRoute.value.path !== "/articles/TCG") {
+    router.push("/articles/TCG");
+  }
+};
+
+// Props
 const props = defineProps({
   showSearchBar: { type: Boolean, default: true }
 });
 
-const searchQuery = ref('');
-const showSearch = ref(false);  // La barre de recherche est masquée au début
+// UI state
+const showSearch = ref(false);
 const isShrunk = ref(false);
-const router = useRouter();
 
+// Navigation vers accueil
 const goToHome = () => {
   router.push('/');
 };
 
+// Effet scroll
 const handleScroll = () => {
   isShrunk.value = window.scrollY > 50;
 };
@@ -59,26 +71,44 @@ onUnmounted(() => {
 });
 </script>
 
+
 <style scoped>
 header {
   display: flex;
-  flex-direction: row; /* ← ici ! */
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   padding: 0 20px;
+
+  /* 🔥 LE BON */
   position: sticky;
   top: 0;
+
   width: 100%;
   height: 80px;
+  overflow: visible;
   transition: all 0.3s ease;
   z-index: 1000;
 }
 
+
+
+/* Panier à droite ABSOLU */
 .cart-wrapper {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
   opacity: 0;
-  transform: translateY(-10px);
   transition: all 0.3s ease;
 }
+
+header:hover .cart-wrapper {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
 
 header:hover .cart-wrapper {
   opacity: 1;
@@ -134,6 +164,10 @@ header:hover .cart-wrapper {
 
 /* Barre de recherche */
 .search-bar {
+  position: absolute;
+  top: 100%; /* 🔥 Ajuste cette valeur si besoin (60–75%) */
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
   width: 400px;
   padding: 8px;
   border: 1px solid #ccc;
@@ -142,13 +176,14 @@ header:hover .cart-wrapper {
   outline: none;
   text-align: center;
   opacity: 0;
-  transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Apparition lors du survol */
+
 header:hover .search-bar {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
+
+
 </style>

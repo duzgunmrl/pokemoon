@@ -5,7 +5,7 @@
     <p>Pour les précommandes, une seule commande par personne est autorisée afin de satisfaire le plus grand nombre de collectionneurs.</p>
 
     <div class="products">
-      <div v-for="product in TCGProducts" :key="product.id" class="product">
+      <div v-for="product in filteredProducts" :key="product.id" class="product">
         <div class="card">
           <div class="card-front">
             <img :src="getImage(product.image)" :alt="product.name" />            
@@ -34,9 +34,24 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref, computed } from 'vue';
 import { useTCGStore } from '@/stores/TCGStore';
 import { useCartStore } from '@/stores/CartStore';
+
+import { useSearchStore } from '@/stores/SearchStore';
+const search = useSearchStore();
+
+const filteredProducts = computed(() => {
+  if (!search.query) return TCGProducts;
+
+  const q = search.query.toLowerCase().trim();
+
+  return TCGProducts.filter(product =>
+    product.name.toLowerCase().includes(q) ||
+    product.description.toLowerCase().includes(q)
+  );
+});
+
 
 onMounted(() => {
   window.scrollTo(0, 0);
