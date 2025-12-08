@@ -4,6 +4,15 @@ export const useTCGStore = defineStore('TCG', {
   state: () => ({
     TCGProducts: [
 
+        {
+        id: 14,
+        name: ' Mini Tins Kanto Power',
+        price: '20€',
+        image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1765234024/minitins_i0upwz.jpg',
+        description: 'Contient 2 boosters Epee et Bouclier, une carte spéciale et un jeton.',
+        realStock: 2
+      }, 
+
       {
         id: 13,
         name: ' ETB ME2.5 - Héros Transcendants',
@@ -24,8 +33,8 @@ export const useTCGStore = defineStore('TCG', {
         realStock: 0
       },
 
-      {
-        id: 11,
+    {
+        id: 11.2,
         name: ' Coffret Premium Lucario ME2.5 - Héros Transcendants',
         price: '0€',
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1763994443/mega_luc_sosqim.webp',
@@ -34,6 +43,15 @@ export const useTCGStore = defineStore('TCG', {
         realStock: 0
       },
 
+      {
+        id: 11,
+        name: ' Coffret Tripack Journée Pokémon 30 Ans',
+        price: '0€',
+        image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1765234024/tripack30ans_sgpcye.webp',
+        description: 'Contient 3 boosters Mega Evolution, une carte promo stamp Pikachu, et un jeton.',
+        stock: 'ALLOCATION À VENIR',
+        realStock: 0
+      },
 
       {
         id: 10,
