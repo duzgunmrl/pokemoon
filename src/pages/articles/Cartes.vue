@@ -2,7 +2,7 @@
   <div class="cartes">
     <h1>Cartes</h1>
     <p>Plongez dans notre sélection exclusive de cartes à l'unité.</p>
-    <p>Toutes les cartes sont envoyées sous sleeve ou sleeve+toploader</p>
+    <p>Toutes les cartes sont envoyées sous sleeve et toploader</p>
 
     <!-- Liste cartes -->
     <div class="products">
