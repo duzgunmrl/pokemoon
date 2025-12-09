@@ -2,7 +2,7 @@
   <header :class="{ shrink: isShrunk }" @mouseover="showSearch = true" @mouseleave="showSearch = false">
     <img 
       src="https://res.cloudinary.com/dhn8p2jp1/image/upload/v1759592106/Design_sans_titre_2_ierfxh.png" 
-      alt="Aurum Logo" 
+      alt=" PokéMoon TCG. Boutique en ligne de TCG Pokémon" 
       class="logo" 
       @click="goToHome"
     />

@@ -6,28 +6,19 @@
 
     <div class="products">
       <div v-for="product in filteredProducts" :key="product.id" class="product">
-        <div class="card">
-          <div class="card-front">
-            <img :src="getImage(product.image)" :alt="product.name" />            
-            <h3>{{ product.name }}</h3>
-            <p class="price">{{ product.price }}</p>
-          </div>
-          <div class="card-back">
-            <p class="description">{{ product.description }}</p>
-            <p class="stock">{{ product.stock }}</p>
-            <button
-              class="buy-button"
-              v-if="isPurchasable(product)"
-              @click="addToCart(product)"
-            >
-              Ajouter au panier
-            </button>
+      <div class="card">
+        <div class="card-front">
+          
+          <!-- Image cliquable -->
+          <router-link :to="'/produit/' + product.slug">
+            <img :src="getImage(product.image)" :alt="product.name" />
+          </router-link>
 
-            <p v-else class="stock-info">
-              Rupture de stock
-            </p>
-          </div>
+          <h3>{{ product.name }}</h3>
+          <p class="price">{{ product.price }}</p>
+
         </div>
+      </div>
       </div>
     </div>
   </div>

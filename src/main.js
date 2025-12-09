@@ -22,6 +22,11 @@ const routes = [
   { path: '/cart', component: CartView },
   { path: '/paiement', component: Paiement },
     // La route qui utilise le composant dynamique
+    {
+  path: "/produit/:slug",
+  name: "Produit",
+  component: () => import("./pages/Produit.vue")
+},
 ];
 
 const router = createRouter({

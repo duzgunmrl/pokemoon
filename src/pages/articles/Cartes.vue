@@ -49,6 +49,22 @@ const cartesProducts = cartesstore.cartesProducts;
 
 const cart = useCartStore();
 
+// ⭐ SEO — titre + meta description
+onMounted(() => {
+  window.scrollTo(0, 0);
+
+  document.title = "Cartes Pokémon à l'unité – Rares, holo & exclusives | PokemoonTCG";
+
+  let meta = document.querySelector('meta[name="description"]');
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = "description";
+    document.head.appendChild(meta);
+  }
+  meta.content =
+    "Découvrez notre sélection de cartes Pokémon à l'unité : rares, holo, exclusives et protégées sous sleeve + toploader. Envoi rapide – PokemoonTCG.";
+});
+
 // Filtre recherche
 const filteredProducts = computed(() => {
   if (!search.query) return cartesProducts;
@@ -58,13 +74,8 @@ const filteredProducts = computed(() => {
   return cartesProducts.filter(
     (product) =>
       product.name.toLowerCase().includes(q) ||
-      product.description?.toLowerCase().includes(q)
+      (product.description && product.description.toLowerCase().includes(q))
   );
-});
-
-// Scroll top
-onMounted(() => {
-  window.scrollTo(0, 0);
 });
 
 // Vérifie prix + stock
@@ -86,6 +97,7 @@ const addToCart = (product) => {
   alert(`${product.name} a été ajouté au panier.`);
 };
 </script>
+
 
 <style scoped>
 .cartes {
