@@ -11,7 +11,7 @@ export const useTCGStore = defineStore('TCG', {
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1765234024/minitins_i0upwz.jpg',
         description: 'Contient 2 boosters Epee et Bouclier, une carte spéciale et un jeton.',
         slug: "mini-tins-kanto-power",
-        realStock: 2
+        realStock: 0
       }, 
 
       {
@@ -68,7 +68,7 @@ export const useTCGStore = defineStore('TCG', {
         description: 'Contient 3 cartes promo Sulfura de la Team Rocket, 18 boosters du JCC Pokémon de diverses séries et des accessoires exclusifs.',
         slug: "upc-sulfura-de-la-team-rocket",
         sku: '0196214129931',
-        realStock: 1
+        realStock: 2
       },
 
       {
@@ -78,13 +78,13 @@ export const useTCGStore = defineStore('TCG', {
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459164/pokupc25_box3d_20250905_umq5dc.png',
         description: 'Contient 2 cartes promo (Méga-Dracaufeu X et Plumeline ex), 18 boosters du JCC Pokémon de diverses séries et des accessoires exclusifs.',
         slug: "upc-mega-dracaufeu-x-ex",
-        realStock: 1
+        realStock: 0
       },
 
       {
         id: 8,
         name: ' Display ME02 - Flammes Fantasmagoriques',
-        price: '240€',
+        price: '250€',
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459524/me02-booster-display-fr-2x_iqmag7.png',
         description: 'Contient 36 boosters de la série ME02.',
         slug: "display-me02-flammes-fantasmagoriques",
@@ -109,7 +109,7 @@ export const useTCGStore = defineStore('TCG', {
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459164/me02-etb-fr-2x_mk0amy.png',
         description: 'Contient 9 boosters de la série ME02, une carte promo et des goodies. Vendu avec une protection souple.',
         slug: "etb-me02-flammes-fantasmagoriques",
-        realStock: 1
+        realStock: 0
       },
 
       {
