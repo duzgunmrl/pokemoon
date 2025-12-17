@@ -63,12 +63,12 @@ export const useTCGStore = defineStore('TCG', {
       {
         id: 10,
         name: ' UPC Sulfura de la Team Rocket',
-        price: '240€',
+        price: '180€',
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1763718003/UPCSULF_hkksvb.png',
         description: 'Contient 3 cartes promo Sulfura de la Team Rocket, 18 boosters du JCC Pokémon de diverses séries et des accessoires exclusifs.',
         slug: "upc-sulfura-de-la-team-rocket",
         sku: '0196214129931',
-        realStock: 2
+        realStock: 1
       },
 
       {
@@ -76,9 +76,9 @@ export const useTCGStore = defineStore('TCG', {
         name: ' UPC Mega Dracaufeu X Ex',
         price: '180€',
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459164/pokupc25_box3d_20250905_umq5dc.png',
-        description: 'Contient 2 cartes promo (Méga-Dracaufeu X et Plumeline ex), 18 boosters du JCC Pokémon de diverses séries et des accessoires exclusifs.',
+        description: 'Contient 2 cartes promo (Méga-Dracaufeu X et Plumeline ex), 18 boosters du JCC Pokémon de diverses séries et des accessoires exclusifs. Vendue avec portection souple contre les UV et les endommagements.',
         slug: "upc-mega-dracaufeu-x-ex",
-        realStock: 0
+        realStock: 1
       },
 
       {
@@ -109,7 +109,7 @@ export const useTCGStore = defineStore('TCG', {
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459164/me02-etb-fr-2x_mk0amy.png',
         description: 'Contient 9 boosters de la série ME02, une carte promo et des goodies. Vendu avec une protection souple.',
         slug: "etb-me02-flammes-fantasmagoriques",
-        realStock: 0
+        realStock: 1
       },
 
       {
