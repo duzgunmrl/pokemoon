@@ -66,7 +66,7 @@ export const useTCGStore = defineStore('TCG', {
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1762459164/pokupc25_box3d_20250905_umq5dc.png',
         description: 'Contient 2 cartes promo (Méga-Dracaufeu X et Plumeline ex), 18 boosters du JCC Pokémon de diverses séries et des accessoires exclusifs. Vendue avec portection souple contre les UV et les endommagements.',
         slug: "upc-mega-dracaufeu-x-ex",
-        realStock: 1
+        realStock: 0
       },
 
       {
