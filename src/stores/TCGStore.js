@@ -9,10 +9,10 @@ export const useTCGStore = defineStore('TCG', {
         name: ' ETB ME2.5 - Héros Transcendants',
         price: '90€',
         image: 'https://res.cloudinary.com/dxa5pwuty/image/upload/v1763994443/et_b_nzobed.webp',
-        description: 'Contient 9 boosters de la série ME2.5, une carte promo et des goodies. Vendu avec une protection souple.',
+        description: 'EN ATTENTE DE NOUVELLES QUANTITÉS. Contient 9 boosters de la série ME2.5, une carte promo et des goodies. Vendu avec une protection souple.',
         slug: "etb-me2.5-héros-transcendants",
         sku : '0196214132481',
-        realStock: 10
+        realStock: 0
       },     
 
       {
